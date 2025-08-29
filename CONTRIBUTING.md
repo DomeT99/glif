@@ -13,12 +13,16 @@ This project is built with [Nuxt](https://nuxt.com/) so all the instructions to 
 First install the dependencies with the follow command:
 
 ```
+npm install
+# or
 yarn install
 ```
 
 for run locally project run:
 
 ```
+npm run dev
+# or
 yarn dev
 ```
 
