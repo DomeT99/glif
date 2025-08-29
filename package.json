@@ -1,7 +1,10 @@
 {
-  "name": "nuxt-app",
+  "name": "glif",
   "type": "module",
   "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Domenico Tenace",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
