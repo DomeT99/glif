@@ -16,7 +16,6 @@ First install the dependencies with the follow command:
 npm install
 # or
 yarn install
-
 ```
 
 for run locally project run:
@@ -25,7 +24,6 @@ for run locally project run:
 npm run dev
 # or
 yarn dev
-
 ```
 
 ## How to Contribute
