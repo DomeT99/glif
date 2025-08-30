@@ -9,6 +9,6 @@
       <br />
       Create, save and manage your QRCodes with ease.
     </p>
-    <GenericButton>GET STARTED</GenericButton>
+    <NuxtLink to="/create"><GenericButton>GET STARTED</GenericButton></NuxtLink>
   </section>
 </template>

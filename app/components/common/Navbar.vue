@@ -18,7 +18,7 @@
         </li>
         <li>
           <NuxtLink
-            to="/"
+            to="/create"
             class="flex items-center gap-1 hover:text-accent transition-colors"
           >
             <PlusCircleIcon class="w-5 h-5" /> Create
