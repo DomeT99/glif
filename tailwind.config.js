@@ -13,11 +13,21 @@ module.exports = {
         secondary: "#F5F5F5",
         accent: "#000",
         background: "#FFFF",
-        surface: "#000", 
+        surface: "#000",
       },
       fontFamily: {
         sans: ["Inter", "Roboto", "Arial", "sans-serif"],
         heading: ["Montserrat", "Inter", "sans-serif"],
+      },
+      fontSize: {
+        sm: "0.875rem",
+        base: "1rem",
+        lg: "1.125rem",
+        xl: "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
       },
       borderRadius: {
         DEFAULT: "0.5rem",
