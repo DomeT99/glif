@@ -25,7 +25,6 @@
           </NuxtLink>
         </li>
       </ul>
-      <GenericButton bg-color="secondary">SIGN IN</GenericButton>
     </div>
   </nav>
 </template>
