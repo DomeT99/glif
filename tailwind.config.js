@@ -16,8 +16,8 @@ module.exports = {
         surface: "#000",
       },
       fontFamily: {
-        sans: ["Inter", "Roboto", "Arial", "sans-serif"],
-        heading: ["Montserrat", "Inter", "sans-serif"],
+        sans: ["Montserrat", "Inter", "mono"],
+        heading: ["Montserrat", "Inter", "mono"],
       },
       fontSize: {
         sm: "0.875rem",

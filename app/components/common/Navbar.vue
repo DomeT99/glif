@@ -7,7 +7,7 @@
         </h1></NuxtLink
       >
 
-      <ul class="flex gap-8 items-center">
+      <ul class="flex gap-8 items-center font-sans">
         <li>
           <NuxtLink
             to="/"
