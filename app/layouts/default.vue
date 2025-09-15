@@ -2,8 +2,9 @@
 <template>
   <section class="bg-background font-sans">
     <CommonNavbar />
-    <main class="container mx-auto">
+    <main class="container mx-auto min-h-[80vh]">
       <slot />
     </main>
+    <CommonFooter />
   </section>
 </template>
