@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-secondary text-surface shadow-minimal p-4">
+  <footer class="bg-secondary text-surface text-center shadow-minimal p-4">
     <div class="flex justify-center">
       <p>
         Made with ❤️ by

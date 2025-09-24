@@ -2,7 +2,7 @@
 <template>
   <section class="bg-background font-sans">
     <CommonNavbar />
-    <main class="container mx-auto min-h-[80vh]">
+    <main class="container mx-auto min-h-[82vh]">
       <slot />
     </main>
     <CommonFooter />

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { useCreateStore } from "~/store/createStore";
 
 const store = useCreateStore();
@@ -13,7 +14,7 @@ const toggleImageSection = ref<boolean>(false);
       >
       <textarea
         v-model="store.qrCodeData.value"
-        class="block w-[90%] rounded-md border border-border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        class="block w-full md:w-[90%] rounded-md border border-border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
         placeholder="Enter text or URL to encode"
       />
     </div>
@@ -24,8 +25,8 @@ const toggleImageSection = ref<boolean>(false);
           v-model="store.qrCodeData.size"
           type="range"
           min="100"
-          max="400"
-          class="w-[90%] h-2 bg-secondary rounded-lg appearance-none cursor-pointer"
+          max="250"
+          class="w-full md:w-[90%] h-2 bg-secondary rounded-lg appearance-none cursor-pointer"
         />
       </div>
     </div>
@@ -35,7 +36,7 @@ const toggleImageSection = ref<boolean>(false);
         <input
           v-model="store.qrCodeData.background"
           type="color"
-          class="w-[15%] h-8 rounded-md border bg-background px-3"
+          class="w-12 sm:w-14 md:w-16 h-8 rounded-md border bg-background px-3"
         />
       </div>
       <div class="mt-6">
@@ -43,15 +44,15 @@ const toggleImageSection = ref<boolean>(false);
         <input
           v-model="store.qrCodeData.foreground"
           type="color"
-          class="w-[15%] h-8 rounded-md border bg-background px-3"
+          class="w-12 sm:w-14 md:w-16 h-8 rounded-md border bg-background px-3"
         />
       </div>
     </div>
 
     <!-- FUTURE IMPLEMENTATION -->
     <template v-if="false">
-      <div class="grid grid-cols-2 gap-4">
-        <div class="mt-[8vh]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="mt-6 sm:mt-[8vh]">
           <label class="inline-flex items-center cursor-pointer">
             <input
               v-model="toggleImageSection"
@@ -70,7 +71,7 @@ const toggleImageSection = ref<boolean>(false);
         <div class="flex w-full">
           <label
             for="dropzone-file"
-            class="flex flex-col justify-center w-[90%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-surface hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+            class="flex flex-col justify-center w-full sm:w-[90%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-surface hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
           >
             <div class="flex flex-col items-center justify-center pt-5 pb-6">
               <svg

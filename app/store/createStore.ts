@@ -4,7 +4,7 @@ import type { QRCodeData } from "~/types/createTypes";
 export const useCreateStore = defineStore("createStore", () => {
   const qrCodeData = ref<QRCodeData>({
     value: "",
-    size: 250,
+    size: 150,
     level: "M",
     renderAs: "canvas",
     background: "#ffffff",
@@ -20,7 +20,7 @@ export const useCreateStore = defineStore("createStore", () => {
   function resetForm() {
     qrCodeData.value = {
       value: "",
-      size: 250,
+      size: 150,
       level: "M",
       renderAs: "canvas",
       background: "#ffffff",
