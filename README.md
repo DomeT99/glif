@@ -1,3 +1,47 @@
 # Glif
 
-⚠️ Under construction ⚠️
+QR code generator built with Nuxt 4, TypeScript and Tailwind CSS.
+
+> Status: ⚠️ **Under construction** — the project is actively being developed.
+
+Description
+-----------
+Glif is a small web application that allows you to create and download customizable QR codes 💯
+<br />
+The UI is designed to be simple and responsive across desktop, tablet and mobile 📱
+
+Key Features
+------------
+- Generate QR codes from text or URLs
+- Customize size and foreground/background colors 
+- Download the QR code as a PNG image
+
+Tech Stack
+----------
+- Nuxt 4
+- TypeScript
+- Tailwind CSS
+- Pinia for state management
+- [qrcode.vue](https://github.com/scopewu/qrcode.vue) for QR rendering 
+
+
+Requirements
+------------
+- Node.js (recommended v16+ or v18+)
+- npm or yarn
+ 
+
+Contributing
+---------------------------
+All instructions can be found in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+
+Support 
+---------------------------
+If you like this project, you can support me with a very small donation. 
+<br/>
+I would be grateful 🥹
+<br/>
+<br/>
+ <a href="https://www.buymeacoffee.com/domenicotenace" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
