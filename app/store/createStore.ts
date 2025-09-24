@@ -33,9 +33,13 @@ export const useCreateStore = defineStore("createStore", () => {
       },
     };
   }
-  function downloadQRCode() {
-    // Implementation for downloading the QR code
+  function downloadQRCode() { 
+    const link = document.createElement("a") as HTMLAnchorElement;
+    const canvas = document.querySelector("canvas")!.toDataURL("image/png") as string; 
+    link.href = canvas;
+    link.download = `${new Date().getTime()}.png`;
+    link.click();
   }
 
-  return { qrCodeData, resetForm,downloadQRCode };
+  return { qrCodeData, resetForm, downloadQRCode };
 });
