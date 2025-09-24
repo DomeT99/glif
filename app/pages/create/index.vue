@@ -6,7 +6,9 @@ const store = useCreateStore();
 </script>
 <template>
   <section>
-    <div class="grid grid-cols-3 gap-4 h-[50vh] mt-[20vh] bg-accent p-10 rounded-lg">
+    <div
+      class="grid grid-cols-3 gap-4 h-[50vh] mt-[20vh] bg-accent p-10 rounded-lg"
+    >
       <div class="col-span-2">
         <CreateForm />
       </div>
@@ -22,6 +24,11 @@ const store = useCreateStore();
           :size="store.qrCodeData.size"
         />
       </div>
+    </div>
+    <div class="bg-accent px-10 py-4 rounded-lg flex justify-end gap-4">
+      <GenericButton>RESET</GenericButton>
+
+      <GenericButton>DOWNLOAD</GenericButton>
     </div>
   </section>
 </template>
