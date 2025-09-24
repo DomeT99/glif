@@ -26,9 +26,9 @@ const store = useCreateStore();
       </div>
     </div>
     <div class="bg-accent px-10 py-4 rounded-lg flex justify-end gap-4">
-      <GenericButton>RESET</GenericButton>
+      <GenericButton @click="store.resetForm">RESET</GenericButton>
 
-      <GenericButton>DOWNLOAD</GenericButton>
+      <GenericButton @click="store.downloadQRCode">DOWNLOAD</GenericButton>
     </div>
   </section>
 </template>
