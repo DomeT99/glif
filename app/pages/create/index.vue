@@ -8,8 +8,7 @@ const store = useCreateStore();
   <section>
     <div
       class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 md:mt-[20vh] bg-accent p-4 sm:p-6 md:p-10 rounded-lg md:h-[50vh]"
-    >
-      <!-- QR preview on mobile appears above the form (order-1), on desktop it's on the right -->
+    > 
       <div
         class="flex justify-center items-center p-4 bg-background rounded-lg order-1 md:order-2"
       >

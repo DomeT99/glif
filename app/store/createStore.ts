@@ -33,9 +33,16 @@ export const useCreateStore = defineStore("createStore", () => {
       },
     };
   }
-  function downloadQRCode() { 
+  function downloadQRCode() {
+    if (qrCodeData.value.value.trim() == "" || qrCodeData.value.value == null) {
+      alert("Please insert a value to generate QR Code.");
+      return;
+    }
+
     const link = document.createElement("a") as HTMLAnchorElement;
-    const canvas = document.querySelector("canvas")!.toDataURL("image/png") as string; 
+    const canvas = document
+      .querySelector("canvas")!
+      .toDataURL("image/png") as string;
     link.href = canvas;
     link.download = `${new Date().getTime()}.png`;
     link.click();

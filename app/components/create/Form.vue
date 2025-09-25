@@ -10,7 +10,10 @@ const toggleImageSection = ref<boolean>(false);
   <form>
     <div>
       <label for="default-range" class="block mb-2 text-lg text-surface"
-        >Value</label
+        >Value<span
+          class="ml-4 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-600 text-white"
+          >RQ</span
+        ></label
       >
       <textarea
         v-model="store.qrCodeData.value"
