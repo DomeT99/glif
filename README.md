@@ -2,8 +2,6 @@
 
 QR code generator built with Nuxt 4, TypeScript and Tailwind CSS.
 
-> Status: ⚠️ **Under construction** — the project is actively being developed.
-
 Description
 -----------
 Glif is a small web application that allows you to create and download customizable QR codes 💯
