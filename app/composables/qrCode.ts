@@ -1,16 +1,16 @@
-import type { Level, RenderAs, ImageSettings } from "qrcode.vue";
-import { isNull, isEmptyString } from "easy-kit-utils";
+//Libraries
+import * as easyKitUtils from "easy-kit-utils";
+//Types
+import type { QRCodeData } from "../types/qrCodeData";
+//Capacitor
+import { Capacitor } from "@capacitor/core";
+import { Filesystem, Directory } from "@capacitor/filesystem";
+import { Media } from "@capacitor-community/media";
+//Utils
+import { handlePhotoAlbums } from "../utils/handlePhotoAlbums";
 
-interface QRCodeData {
-  value: string;
-  size: number;
-  level: Level;
-  renderAs: RenderAs;
-  background: string;
-  foreground: string;
-  imageSettings: ImageSettings;
-}
-
+// @ts-ignore
+const { isNull, isEmptyString } = easyKitUtils.default || easyKitUtils;
 const data = ref<QRCodeData>({
   value: "",
   size: 150,
@@ -43,20 +43,56 @@ export const useQRCode = () => {
       },
     } satisfies Readonly<QRCodeData>);
 
-  const downloadQRCode = () => {
+  const downloadQRCode = async () => {
     if (isEmptyString(data.value.value) || isNull(data.value.value)) {
       alert("Please insert a value to generate QR Code.");
       return;
     }
 
-    const link = document.createElement("a") as HTMLAnchorElement;
-    const canvas = document
-      .querySelector("canvas")!
-      .toDataURL("image/png") as string;
+    const fileName = `${new Date().getTime()}.png`;
+    const base64Data = document.querySelector("canvas")!.toDataURL("image/png");
 
-    link.href = canvas;
-    link.download = `${new Date().getTime()}.png`;
+    if (Capacitor.isNativePlatform()) {
+      await _downloadNativeQRCode(fileName, base64Data);
+    } else {
+      _downloadWebQRCode(fileName, base64Data);
+    }
+    resetData();
+  };
+
+  const _downloadWebQRCode = (fileName: string, base64Data: string) => {
+    const link = document.createElement("a") as HTMLAnchorElement;
+
+    link.href = base64Data;
+    link.download = fileName;
     link.click();
+  };
+
+  const _downloadNativeQRCode = async (
+    fileName: string,
+    base64Data: string,
+  ) => {
+    try {
+      const base64DataSplitted = base64Data.split(",")[1] as string;
+      const album = await handlePhotoAlbums();
+
+      const savedFile = await Filesystem.writeFile({
+        path: fileName,
+        data: base64DataSplitted!,
+        directory: Directory.Cache,
+      });
+
+      await Media.savePhoto({
+        path: savedFile.uri,
+        albumIdentifier: album.identifier,
+      });
+
+      alert("QR Code has been saved to your gallery.");
+      return;
+    } catch (error) {
+      alert("An error occurred during the saving: " + error);
+      return;
+    }
   };
 
   return { data, resetData, downloadQRCode };

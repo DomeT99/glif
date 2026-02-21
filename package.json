@@ -3,7 +3,7 @@
   "description": "Application that allows you to create and download customizable QR codes",
   "type": "module",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.3.1",
   "license": "MIT",
   "authors": [
     "Domenico Tenace"
@@ -12,6 +12,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "mobile": "pnpm generate && npx cap sync",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "preview-test": "nuxt build && nuxt preview",
@@ -21,6 +22,7 @@
     "test:coverage": "vitest --coverage"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.1.0",
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/test-utils": "^3.21.0",
     "@tailwindcss/vite": "^4.1.15",
@@ -37,6 +39,13 @@
     "vue-router": "^4.6.3"
   },
   "dependencies": {
-    "easy-kit-utils": "^1.0.0"
+    "@capacitor-community/media": "^9.0.1",
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/app": "^8.0.1",
+    "@capacitor/core": "^8.1.0",
+    "@capacitor/filesystem": "^8.1.2",
+    "@capacitor/status-bar": "^8.0.1",
+    "easy-kit-utils": "^1.0.0",
+    "typescript": "^5.9.3"
   }
 }
