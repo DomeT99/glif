@@ -32,6 +32,16 @@
           Create
         </NuxtLink>
       </li>
+
+      <li>
+        <NuxtLink
+          to="/create"
+          class="flex items-center gap-2 text-surface fill-surface transition-colors"
+        >
+          <IconAbout />
+          About
+        </NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>

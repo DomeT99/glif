@@ -15,6 +15,13 @@
     <p class="text-lg text-neutral-500 text-center z-10">
       Smartly organized generated links with easy customization.
     </p>
-    <NuxtLink to="/create" class="z-10"><GenericButton>Get started</GenericButton></NuxtLink>
+    <section class="flex flex-col lg:flex-row gap-4 z-10 mt-6 w-full sm:w-auto items-center justify-center">
+      <NuxtLink to="/create" class="w-full sm:w-auto">
+        <GenericButton class="w-full sm:min-w-50">Get started</GenericButton>
+      </NuxtLink>
+      <NuxtLink to="/create" class="w-full sm:w-auto">
+        <GenericButton class="w-full sm:min-w-50">About</GenericButton>
+      </NuxtLink>
+    </section>
   </main>
 </template>
