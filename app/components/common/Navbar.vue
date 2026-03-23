@@ -35,7 +35,7 @@
 
       <li>
         <NuxtLink
-          to="/create"
+          to="/about"
           class="flex items-center gap-2 text-surface fill-surface transition-colors"
         >
           <IconAbout />
